@@ -140,6 +140,7 @@ namespace LotteryNumberGenerator {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void MainForm_KeyPress(object sender, KeyPressEventArgs e) {
+            int x = 0;
             e.Handled = true;
             switch (e.KeyChar) {
                 case 'b':
