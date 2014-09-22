@@ -1,18 +1,26 @@
 Hey,
   I was thinking about the practice problem with evaluating in C#.
   I got this far
+  
 ```
-public static String eval(string x, string y,string op){
-    if (op =="+"){
+using System;
+public class Test
+{
+	public static void Main()
+	{
+		var first = "523=10";
+		var second="++";
+		var one = first.Split('=')[0];
+		var two = first.Split('=')[1];
+	   	Console.WriteLine(eval(eval("5","2",'+'),"3",'+').Equals(two));
+	}
+	public static	String eval(string x, string y, char op){
+    if (op =='+')
         return (int.Parse(x)+int.Parse(y)).ToString();
-    }
     else
         return (int.Parse(x)-int.Parse(y)).ToString();
+	}
 }
-Console.WriteLine(eval(eval("1","2","+"),"4","-"));
 ```
-This return -1
-But from here the recursion needed to figure it out blew my mind.
-I think we could str.split("=")
-then use every expression in every location and and compare the two.
-I'll keep working on it later.
+
+For another day
